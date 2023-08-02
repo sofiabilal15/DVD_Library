@@ -28,7 +28,7 @@ public class DVD_DAO_File_collectionImpl implements DVD_DAO {
             // 4.
             String line = null;
             while((line=br.readLine()) != null) {
-                StringTokenizer st = new StringTokenizer(line, "=:"); // Error fix 1: did not pass line as the first parameter
+                StringTokenizer st = new StringTokenizer(line, ":="); // Error fix 1: did not pass line as the first parameter
 
                 st.nextToken();
                 String dId = st.nextToken();
@@ -137,6 +137,7 @@ public class DVD_DAO_File_collectionImpl implements DVD_DAO {
     @Override
     public boolean writeToFile() {
         try {
+            System.out.println("In Writing to file =====");
             // 1.
             File myFile = new File("DVD_DB.txt"); // if the file DVD_DB.txt does not exist, it will be created automatically
             // 2.
@@ -150,6 +151,7 @@ public class DVD_DAO_File_collectionImpl implements DVD_DAO {
 
             }
 
+            fw.close();
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

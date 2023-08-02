@@ -130,6 +130,7 @@ public class Main {
                         dvdService.updateDVD(updateFetchedDVD);
                         System.out.println("DVD information edited successfully!");
                     }
+                    break;
                 case 4:
                     List<DVD> allDVDs = dvdService.fetchAllDVDs();
                     for (DVD eachDVD : allDVDs) {
@@ -146,6 +147,7 @@ public class Main {
                     }else {
                         System.out.println(fetchedDVD);
                     }
+                    break;
                 case 6:
                     System.out.println("Enter the DVD Title to find the DVD...");
                     scan.nextLine();
@@ -159,6 +161,7 @@ public class Main {
                             System.out.println(eachDVD);
                         }
                     }
+                    break;
                 case 7:
                     System.out.println("Written to a file...");
                     dvdService.writeToFile();

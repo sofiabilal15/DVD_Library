@@ -1,5 +1,6 @@
 package Service;
 import DAO.DVD_DAO;
+import DAO.DVD_DAO_File_collectionImpl;
 import DAO.DVD_Dao_CollectionImpl;
 import Model.DVD;
 import java.util.List;
@@ -13,7 +14,7 @@ public class DVDServiceImpl implements DVDService {
     DVD_DAO dvdDao = null; // BookServiceImpl is dependent on BookDaoCollectionImpl
 
     public DVDServiceImpl() {
-        dvdDao = new DVD_Dao_CollectionImpl();
+        dvdDao = new DVD_DAO_File_collectionImpl();
     }
 
     @Override
