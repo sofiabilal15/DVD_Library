@@ -15,12 +15,12 @@ public class DVD {
 
     public DVD(int DVDId, String title, LocalDate release_date, String MPAA_rating, String director_name, String studio, int user_rating) {
         this.DVDId = DVDId;
-        Title = title;
-        Release_date = release_date;
+        this.Title = title;
+        this.Release_date = release_date;
         this.MPAA_rating = MPAA_rating;
-        Director_name = director_name;
-        Studio = studio;
-        User_rating = user_rating;
+        this.Director_name = director_name;
+        this.Studio = studio;
+        this.User_rating = user_rating;
     }
 
     public int getDVDId() {

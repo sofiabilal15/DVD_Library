@@ -96,33 +96,35 @@ public class Main {
                         System.out.println("Sorry! DVD with this ID doesn't exist" );
                     } else {
                         //print the book info
-                        System.out.println(updateFetchedDVD);
+                        //System.out.println(updateFetchedDVD);
+
                         System.out.println("Please edit the Title");
                         String updateTitle = scan.nextLine();
                         updateFetchedDVD.setTitle(updateTitle);
+                        scan.nextLine();
 
-                        System.out.println(updateFetchedDVD);
+                        //System.out.println(updateFetchedDVD);
                         System.out.println("Please edit the Director name");
                         String updateAuthor = scan.nextLine();
                         updateFetchedDVD.setDirector_name(updateAuthor);
 
-                        System.out.println(updateFetchedDVD);
+                        //System.out.println(updateFetchedDVD);
                         System.out.println("Please edit the Studio name");
                         String updateStudio = scan.nextLine();
                         updateFetchedDVD.setStudio(updateStudio);
 
-                        System.out.println(updateFetchedDVD);
+                        //System.out.println(updateFetchedDVD);
                         System.out.println("Please edit the Release date");
                         String updatepublished = scan.nextLine();
                         LocalDate updatepublishedDate = LocalDate.parse(updatepublished);
                         updateFetchedDVD.setRelease_date(updatepublishedDate);
 
-                        System.out.println(updateFetchedDVD);
+                        //System.out.println(updateFetchedDVD);
                         System.out.println("Please edit the MPAA rating");
                         String updateMPAA = scan.nextLine();
                         updateFetchedDVD.setMPAA_rating(updateMPAA);
 
-                        System.out.println(updateFetchedDVD);
+                        //System.out.println(updateFetchedDVD);
                         System.out.println("Please edit the User rating");
                         int updateUser = scan.nextInt();
                         updateFetchedDVD.setUser_rating(updateUser);

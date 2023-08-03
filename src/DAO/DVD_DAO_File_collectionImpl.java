@@ -28,35 +28,62 @@ public class DVD_DAO_File_collectionImpl implements DVD_DAO {
             // 4.
             String line = null;
             while((line=br.readLine()) != null) {
-                StringTokenizer st = new StringTokenizer(line, ":="); // Error fix 1: did not pass line as the first parameter
+                //System.out.println(line);
+                StringTokenizer st = new StringTokenizer(line, ":"); // Error fix 1: did not pass line as the first parameter
 
+                //System.out.println(st.countTokens());
                 st.nextToken();
+
                 String dId = st.nextToken();
+                //System.out.println(dId);
                 int dvdId = Integer.parseInt(dId);
 
-                st.nextToken();
+
+                line = br.readLine();
+                //System.out.println(line);
+                st = new StringTokenizer(line, ":");
+                //System.out.println(st.countTokens());
+                st.nextToken(); // skip the first token
                 String dvdTitle = st.nextToken();
 
+                line = br.readLine();
+                st = new StringTokenizer(line, ":");
                 st.nextToken();
                 String DPublished = st.nextToken();
                 LocalDate dvdPublished = LocalDate.parse(DPublished);
 
+                line = br.readLine();
+                st = new StringTokenizer(line, ":");
                 st.nextToken();
                 String dMPAA = st.nextToken();
 
+                line = br.readLine();
+                st = new StringTokenizer(line, ":");
                 st.nextToken();
                 String dvdDirector = st.nextToken();
 
+                line = br.readLine();
+                st = new StringTokenizer(line, ":");
                 st.nextToken();
                 String dvdStudio = st.nextToken();
 
+                line = br.readLine();
+                st = new StringTokenizer(line, ":");
                 st.nextToken();
                 String dUser = st.nextToken();
                 int dvdUser = Integer.parseInt(dUser);
 
+//                System.out.println(dvdId);
+//                System.out.println(dvdTitle);
+//                System.out.println(dvdPublished);
+//                System.out.println(dMPAA);
+//                System.out.println(dvdDirector);
+//                System.out.println(dvdStudio);
+//                System.out.println(dvdUser);
 
                 DVD dvd = new DVD(dvdId,dvdTitle,dvdPublished,dMPAA,dvdDirector,dvdStudio,dvdUser);
                 dvdFileDataStore.add(dvd);
+                System.out.println(dvdFileDataStore.size());
 
             }
 
@@ -146,6 +173,7 @@ public class DVD_DAO_File_collectionImpl implements DVD_DAO {
             // traverse through the collection dvdFileDataStore
             // as we traverse write the string represtation of BookPojo objects to the file
             for(DVD eachDVD: dvdFileDataStore) {
+                //fw.write((eachDVD.toString()).toCharArray());
                 fw.write((eachDVD.toString()+"\n").toCharArray());
                 fw.flush();// Error fix 2: did not call flush after writing to the FileWriter fw
 

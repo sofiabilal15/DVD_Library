@@ -1,8 +1,15 @@
-DVD ID: 101
-Title: ter
-Published Date: 1990-10-10
-MPAA Rating: ter
-Director: ter
-Studio: 1
-User Rating: 1
+DVD ID:101
+Title:Casino Royale
+Published Date:2006-05-05
+MPAA Rating:Action
+Director:Martin Campbell
+Studio:Sony Pictures
+User Rating:8
+DVD ID:102
+Title:Skyfall
+Published Date:2012-10-10
+MPAA Rating:Sony Pictures
+Director:Sam Mendes
+Studio:Thriller
+User Rating:8
 
